@@ -1,9 +1,4 @@
 
-# coding: utf-8
-
-# In[ ]:
-
-
 def display_board(board):
     print('\n'*10)
     
@@ -20,14 +15,11 @@ def display_board(board):
     print('   |   |')
 
 
-# In[ ]:
 
 
 test_board = ['#','X','O','X','O','X','O','X','O','X']
 display_board(test_board)
 
-
-# In[ ]:
 
 
 def player_input():
@@ -42,14 +34,11 @@ def player_input():
         return ('O', 'X')
 
 
-# In[ ]:
 
 
 def place_marker(board, marker, position):
     board[position] = marker
 
-
-# In[ ]:
 
 
 def win_check(board,mark):
@@ -64,9 +53,6 @@ def win_check(board,mark):
     (board[9] == mark and board[5] == mark and board[1] == mark)) # diagonal
 
 
-# In[ ]:
-
-
 import random
 
 def choose_first():
@@ -76,15 +62,9 @@ def choose_first():
         return 'Player 1'
 
 
-# In[ ]:
-
-
 def space_check(board, position):
     
     return board[position] == ' '
-
-
-# In[ ]:
 
 
 def full_board_check(board):
@@ -93,8 +73,6 @@ def full_board_check(board):
             return False
     return True
 
-
-# In[ ]:
 
 
 def player_choice(board):
@@ -106,15 +84,10 @@ def player_choice(board):
     return position
 
 
-# In[ ]:
-
 
 def replay():
     
     return input('Do you want to play again? Enter Yes or No: ').lower().startswith('y')
-
-
-# In[ ]:
 
 
 print('Welcome to Tic Tac Toe!')
