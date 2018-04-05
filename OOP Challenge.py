@@ -18,22 +18,22 @@ class Account:
         self.owner = owner
         self.balance = balance
     def __str__(self):
-        return f"Account owner: {self.owner}\nBalance: ${self.balance}"
+        return f"Account owner: {self.owner} \nBalance: ${self.balance}"
     
-    def deposit(self,amount):
-        self.balance += amount
-        print("Deposit Accepted")
-    def withdraw(self,amount):
-        if self.balance >= amount:
-            self.balance -= amount
-            print("Withdrawal Accepted")
+    def deposit(self,dep_amount):
+        self.balance += dep_amount
+        print(f"Deposit Accepted \n${dep_amount} has been added to your account")
+    def withdraw(self,with_amount):
+        if self.balance >= with_amount:
+            self.balance -= with_amount
+            print(f"Withdrawal Accepted \n${with_amount} has been taken from your account")
         else:
-            print("Funds Unavailable!")
+            print("Insuficient Funds!")
 
 #############################################################################
 
 # 1. Instantiate the class
-acct1 = Account('Jose',100)
+acct1 = Account('Daniel',250)
 
 # 2. Print the object
 print(acct1)
